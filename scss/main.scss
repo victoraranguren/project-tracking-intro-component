@@ -1,3 +1,64 @@
+@import "_variables/variables.scss";
+@import "_mixins/mixins.scss";
+
+*{
+  box-sizing: border-box;
+}
+
 body{
   font-family: 'Roboto', sans-serif;
+  font-size: $font-size;
+}
+
+// Header
+.header{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  @include container;
+  padding: 2.5em 0;
+  z-index: 10;
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 7em;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #fff;
+    padding: .5em 1em;
+    border-radius: 0.1875em * 1.5;
+    box-shadow: rgba(153, 153, 153, 0.185) 2px 3px 3px;
+    z-index: 20;
+  }
+  &__link{
+    display: inline-block;
+    width: 100%;
+    color: $very-dark-blue;
+    font-size: 1.15em;
+    padding: 1em;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', 'Roboto';
+    text-transform: uppercase;
+    &:last-of-type{
+      color: $grayish-blue;
+      border-top: $grayish-blue 1px solid;
+    }
+  }
+  &__btn{
+    display: inline-block;
+    width: 2em;
+    height: 100%;
+    .img{
+      display: inline-block;
+      height: auto;
+      width: 100%;
+    }
+  }
 }

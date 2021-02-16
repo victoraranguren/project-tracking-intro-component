@@ -19,7 +19,7 @@ body{
   padding: 2.5em 0;
   z-index: 10;
   &__nav{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -34,6 +34,9 @@ body{
     border-radius: 0.1875em * 1.5;
     box-shadow: rgba(153, 153, 153, 0.185) 2px 3px 3px;
     z-index: 20;
+    &.active{
+      display: flex;
+    }
   }
   &__link{
     display: inline-block;

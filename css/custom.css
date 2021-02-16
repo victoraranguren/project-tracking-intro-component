@@ -19,7 +19,7 @@ body {
   z-index: 10;
 }
 .header__nav {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +34,9 @@ body {
   border-radius: 0.28125em;
   box-shadow: rgba(153, 153, 153, 0.185) 2px 3px 3px;
   z-index: 20;
+}
+.header__nav.active {
+  display: flex;
 }
 .header__link {
   display: inline-block;

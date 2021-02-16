@@ -19,6 +19,12 @@ body {
     background: $light-grayish-blue;
     border-bottom-left-radius: 4em;
     z-index: 10;
+    @include mq($mq, md){
+      height: 25pc;
+    }
+    @include mq($mq, lg){
+      height: 25pc;
+    }
   }
 }
 
@@ -89,9 +95,16 @@ body {
 .main {
   @include container;
   flex-direction: column;
+  @include mq($mq, md){
+    flex-direction: row-reverse;
+  }
   &__section {
     display: inline-block;
     margin-bottom: 5em;
+    @include mq($mq, md){
+      width: 40%;
+      margin-top: 5em;
+    }
   }
   &__img {
     position: relative;
@@ -101,6 +114,12 @@ body {
     height: 270px;
     width: auto;
     z-index: 15;
+    @include mq($mq, md){
+      position: absolute;
+      left: auto;
+      right: -9.75rem;
+      height: 400px;
+    }
   }
   &__alert {
     display: flex;
@@ -127,6 +146,9 @@ body {
     font-family: "Roboto Condensed";
     font-weight: 700;
     margin-top: 0.5em;
+    @include mq($mq, md){
+      font-size: 2.25em;
+    }
   }
   &__text {
     color: $dark-grayish-blue;

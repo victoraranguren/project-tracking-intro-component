@@ -1,3 +1,9 @@
+@mixin mq($mq, $size) {
+  @media screen and (min-width: map-get($mq, $size)) {
+    @content;
+  }
+}
+
 @mixin container {
   width: 80%;
   margin: auto;

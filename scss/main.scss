@@ -1,24 +1,25 @@
 @import "_variables/variables.scss";
 @import "_mixins/mixins.scss";
 
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
   font-size: $font-size;
+  overflow-x: hidden;
 }
 
 // Header
-.header{
+.header {
   display: flex;
   flex-direction: row;
   position: relative;
   @include container;
   padding: 2.5em 0;
   z-index: 10;
-  &__nav{
+  &__nav {
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -30,15 +31,15 @@ body{
     height: auto;
     margin: auto;
     background: #fff;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     border-radius: 0.1875em * 1.5;
     box-shadow: rgba(153, 153, 153, 0.185) 2px 3px 3px;
     z-index: 20;
-    &.active{
+    &.active {
       display: flex;
     }
   }
-  &__link{
+  &__link {
     display: inline-block;
     width: 100%;
     color: $very-dark-blue;
@@ -47,21 +48,92 @@ body{
     text-decoration: none;
     text-align: center;
     font-weight: 700;
-    font-family: 'Roboto Condensed', 'Roboto';
+    font-family: "Roboto Condensed", "Roboto";
     text-transform: uppercase;
-    &:last-of-type{
+    &:last-of-type {
       color: $grayish-blue;
       border-top: $grayish-blue 1px solid;
     }
   }
-  &__btn{
+  &__btn {
     display: inline-block;
     width: 2em;
     height: 100%;
-    .img{
+    .img {
       display: inline-block;
       height: auto;
       width: 100%;
+    }
+  }
+}
+
+// Main
+.main {
+  @include container;
+  flex-direction: column;
+  &__section {
+    display: inline-block;
+    margin-bottom: 5em;
+  }
+  &__img {
+    position: relative;
+    display: inline-block;
+    top: auto;
+    left: -1.75em;
+    height: 270px;
+    width: auto;
+  }
+  &__alert{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  &__badge{
+    display: inline-block;
+    background: $very-dark-blue;
+    padding: .25em .75em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 1em;
+    margin-right: 1em;
+  }
+  &__badge__alt{
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+    color: $grayish-blue;
+  }
+  &__title{
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    margin-top: .5em;
+  }
+  &__text{
+    color: $dark-grayish-blue;
+  }
+  &__group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 50%;
+    font-family: 'Roboto Condensed';
+    font-size: .8em;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    padding: 1em;
+    background: $red;
+    border-radius: 0.5rem;
+    &:last-of-type{
+      background: none;
+      color: $grayish-blue;
     }
   }
 }

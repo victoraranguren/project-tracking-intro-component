@@ -34,6 +34,7 @@ body .bg-body {
   flex-direction: row;
   position: relative;
   width: 80%;
+  max-width: 75rem;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -102,6 +103,9 @@ body .bg-body {
     margin-left: 1.875em;
     font-size: 1em;
   }
+  .header__link:hover {
+    text-decoration: underline;
+  }
   .header__link:last-of-type {
     border: none;
   }
@@ -138,6 +142,7 @@ body .bg-body {
 
 .main {
   width: 80%;
+  max-width: 75rem;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -232,6 +237,7 @@ body .bg-body {
 }
 @media screen and (min-width: 768px) {
   .main__group {
+    width: 85%;
     margin: 3em 0;
   }
 }
@@ -252,6 +258,14 @@ body .bg-body {
 .main__btn:last-of-type {
   background: none;
   color: #a0a1ac;
+}
+@media screen and (min-width: 768px) {
+  .main__btn:hover {
+    background: #ff8585;
+  }
+  .main__btn:last-of-type:hover {
+    background: none;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */

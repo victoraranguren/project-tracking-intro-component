@@ -91,6 +91,9 @@ body {
       padding: 0;
       margin-left: 2.5em * .75;
       font-size: 1em;
+      &:hover{
+        text-decoration: underline;
+      }
       &:last-of-type {
         border: none;
       }
@@ -206,6 +209,7 @@ body {
     justify-content: space-between;
     align-items: center;
     @include mq($mq, md) {
+      width: 85%;
       margin: 3em 0;
     }
   }
@@ -225,6 +229,14 @@ body {
     &:last-of-type {
       background: none;
       color: $grayish-blue;
+    }
+    @include mq($mq, md){
+      &:hover{
+        background: lighten($red,8);
+      }
+      &:last-of-type:hover{
+        background: none;
+      }
     }
   }
 }

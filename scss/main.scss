@@ -19,10 +19,10 @@ body {
     background: $light-grayish-blue;
     border-bottom-left-radius: 4em;
     z-index: 10;
-    @include mq($mq, md){
+    @include mq($mq, md) {
       height: 25pc;
     }
-    @include mq($mq, lg){
+    @include mq($mq, lg) {
       height: 25pc;
     }
   }
@@ -36,6 +36,10 @@ body {
   @include container;
   padding: 2.5em 0;
   z-index: 16;
+  @include mq($mq, md){
+    flex-direction: row;
+    align-items: center;
+  }
   &__nav {
     display: none;
     flex-direction: column;
@@ -52,6 +56,18 @@ body {
     border-radius: 0.1875em * 1.5;
     box-shadow: rgba(153, 153, 153, 0.185) 2px 3px 3px;
     z-index: 19;
+    @include mq($mq, md){
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      background: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
     &.active {
       display: flex;
     }
@@ -71,6 +87,21 @@ body {
       color: $grayish-blue;
       border-top: $grayish-blue 1px solid;
     }
+    @include mq($mq, md){
+      padding: 0;
+      margin-left: 2.5em * .75;
+      font-size: 1em;
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+  &__separator{
+    font-family: 'Open Sans';
+    font-size: 2.5em;
+    font-weight: 600;
+    color: $grayish-blue;
+    margin-left: 1em * .75;
   }
   &__btn {
     position: relative;
@@ -78,7 +109,10 @@ body {
     height: 1em;
     width: auto;
     z-index: 19;
-    &.active{
+    @include mq($mq, md){
+      display: none;
+    }
+    &.active {
       height: 1.24em;
     }
     .img {
@@ -95,16 +129,13 @@ body {
 .main {
   @include container;
   flex-direction: column;
-  @include mq($mq, md){
+  @include mq($mq, md) {
     flex-direction: row-reverse;
+    align-items: center;
   }
   &__section {
     display: inline-block;
     margin-bottom: 5em;
-    @include mq($mq, md){
-      width: 40%;
-      margin-top: 5em;
-    }
   }
   &__img {
     position: relative;
@@ -114,11 +145,24 @@ body {
     height: 270px;
     width: auto;
     z-index: 15;
-    @include mq($mq, md){
+    @include mq($mq, md) {
+      position: absolute;
+      top: 11em;
+      left: auto;
+      right: -13.75em;
+      height: 25rem;
+    }
+    @include mq($mq, lg) {
       position: absolute;
       left: auto;
       right: -9.75rem;
       height: 400px;
+    }
+  }
+  &__info{
+    @include mq($mq, md) {
+      width: 45%;
+      margin-top: 6em;
     }
   }
   &__alert {
@@ -146,18 +190,24 @@ body {
     font-family: "Roboto Condensed";
     font-weight: 700;
     margin-top: 0.5em;
-    @include mq($mq, md){
+    @include mq($mq, md) {
       font-size: 2.25em;
     }
   }
   &__text {
     color: $dark-grayish-blue;
+    @include mq($mq, md) {
+      width: 80%;
+    }
   }
   &__group {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @include mq($mq, md) {
+      margin: 3em 0;
+    }
   }
   &__btn {
     display: inline-block;

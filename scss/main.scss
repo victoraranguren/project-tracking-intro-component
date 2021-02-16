@@ -9,6 +9,17 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: $font-size;
   overflow-x: hidden;
+  .bg-body {
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    height: 63vh;
+    top: 0;
+    right: 0;
+    background: $light-grayish-blue;
+    border-bottom-left-radius: 4em;
+    z-index: 10;
+  }
 }
 
 // Header
@@ -18,7 +29,7 @@ body {
   position: relative;
   @include container;
   padding: 2.5em 0;
-  z-index: 10;
+  z-index: 16;
   &__nav {
     display: none;
     flex-direction: column;
@@ -34,7 +45,7 @@ body {
     padding: 0.5em 1em;
     border-radius: 0.1875em * 1.5;
     box-shadow: rgba(153, 153, 153, 0.185) 2px 3px 3px;
-    z-index: 20;
+    z-index: 19;
     &.active {
       display: flex;
     }
@@ -56,13 +67,17 @@ body {
     }
   }
   &__btn {
+    position: relative;
     display: inline-block;
     width: 2em;
     height: 100%;
+    z-index: 19;
     .img {
+      position: relative;
       display: inline-block;
       height: auto;
       width: 100%;
+      z-index: 18;
     }
   }
 }
@@ -82,56 +97,57 @@ body {
     left: -1.75em;
     height: 270px;
     width: auto;
+    z-index: 15;
   }
-  &__alert{
+  &__alert {
     display: flex;
     align-items: center;
     justify-content: start;
   }
-  &__badge{
+  &__badge {
     display: inline-block;
     background: $very-dark-blue;
-    padding: .25em .75em;
+    padding: 0.25em 0.75em;
     text-transform: uppercase;
     color: #fff;
     font-weight: 600;
     border-radius: 1em;
     margin-right: 1em;
   }
-  &__badge__alt{
+  &__badge__alt {
     text-transform: uppercase;
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     color: $grayish-blue;
   }
-  &__title{
+  &__title {
     text-transform: uppercase;
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     font-weight: 700;
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
-  &__text{
+  &__text {
     color: $dark-grayish-blue;
   }
-  &__group{
+  &__group {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  &__btn{
+  &__btn {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
     width: 50%;
-    font-family: 'Roboto Condensed';
-    font-size: .8em;
+    font-family: "Roboto Condensed";
+    font-size: 0.8em;
     font-weight: 700;
     text-align: center;
     color: #fff;
     padding: 1em;
     background: $red;
     border-radius: 0.5rem;
-    &:last-of-type{
+    &:last-of-type {
       background: none;
       color: $grayish-blue;
     }
